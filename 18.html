@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources From Hell</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      height: 100%;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Video background styling */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Content Styling */
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #00FF00;
+    }
+
+    h1 {
+      font-size: 4.5em;
+      color: #00FF00;
+      text-shadow: 0 0 10px #00FF00, 0 0 15px #00FF00, 0 0 20px #FF0000; /* Reduced glow intensity */
+      animation: flicker 1.5s infinite alternate;
+      margin-top: 50px;
+    }
+
+    @keyframes flicker {
+      0% { text-shadow: 0 0 10px #00FF00, 0 0 15px #00FF00, 0 0 20px #FF0000; } /* Reduced glow intensity */
+      50% { text-shadow: none; }
+      100% { text-shadow: 0 0 10px #00FF00, 0 0 15px #00FF00, 0 0 20px #FF0000; } /* Reduced glow intensity */
+    }
+
+    #typing-effect {
+      font-size: 1.5em;
+      color: red;
+      margin: 20px auto; /* Centered horizontally */
+      margin-top: 40px; /* Space below the title */
+      width: fit-content;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid red;
+      animation: typing 4s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: fit-content; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .file-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+      z-index: 1;
+    }
+
+    .file-card {
+      display: inline-block;
+      width: 250px;
+      margin: 15px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 2px solid #00FF00;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+      cursor: pointer;
+    }
+
+    .file-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00FF00;
+      border: 2px solid yellow;
+    }
+
+    .file-card a {
+      color: yellow;
+      text-decoration: none;
+      font-size: 1.2em;
+      text-shadow: 0 0 10px yellow;
+    }
+    .file-card:hover a {
+      color: purple;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1.2em;
+      color: #00FF00;
+      background-color: #1a1a1a;
+      padding: 20px;
+    }
+
+    .explore-button {
+      background-color: #00FF00;
+      color: #121212;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      margin-top: 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .explore-button:hover {
+      background-color: #FF00FF;
+      color: #00FF00;
+      box-shadow: 0 0 20px #FF00FF;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video Background -->
+  <video class="video-background" autoplay muted loop>
+    <source src="https://github.com/lucifer-6996/videos-and-images/raw/refs/heads/main/36503-427607440.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content Section -->
+  <div class="content">
+    <h1>Resources From Hell</h1>
+    <div id="typing-effect">Access your most secure and hidden resources below...</div>
+    <button class="explore-button" onclick="document.querySelector('.file-cards-container').scrollIntoView();">
+      Explore Resources
+    </button>
+
+    <!-- File Cards -->
+    <div class="file-cards-container">
+      <div class="file-card"><a href="https://example.com/file1" target="_blank">APK File 1</a></div>
+      <div class="file-card"><a href="https://example.com/file2" target="_blank">Software 1</a></div>
+      <div class="file-card"><a href="https://example.com/file3" target="_blank">APK File 2</a></div>
+      <div class="file-card"><a href="https://example.com/file4" target="_blank">Software 2</a></div>
+      <div class="file-card"><a href="https://example.com/file5" target="_blank">APK File 3</a></div>
+      <div class="file-card"><a href="https://example.com/file6" target="_blank">Software 3</a></div>
+      <div class="file-card"><a href="https://example.com/file7" target="_blank">APK File 4</a></div>
+      <div class="file-card"><a href="https://example.com/file8" target="_blank">Software 4</a></div>
+      <div class="file-card"><a href="https://example.com/file9" target="_blank">APK File 5</a></div>
+      <div class="file-card"><a href="https://example.com/file10" target="_blank">Software 5</a></div>
+      <div class="file-card"><a href="https://example.com/file11" target="_blank">APK File 6</a></div>
+      <div class="file-card"><a href="https://example.com/file12" target="_blank">Software 6</a></div>
+      <div class="file-card"><a href="https://example.com/file13" target="_blank">APK File 7</a></div>
+      <div class="file-card"><a href="https://example.com/file14" target="_blank">Software 7</a></div>
+      <div class="file-card"><a href="https://example.com/file15" target="_blank">APK File 8</a></div>
+      <div class="file-card"><a href="https://example.com/file16" target="_blank">Software 8</a></div>
+      <div class="file-card"><a href="https://example.com/file17" target="_blank">APK File 9</a></div>
+      <div class="file-card"><a href="https://example.com/file18" target="_blank">Software 9</a></div>
+      <div class="file-card"><a href="https://example.com/file19" target="_blank">APK File 10</a></div>
+      <div class="file-card"><a href="https://example.com/file20" target="_blank">Software 10</a></div>
+      <div class="file-card"><a href="https://example.com/file21" target="_blank">APK File 11</a></div>
+      <div class="file-card"><a href="https://example.com/file22" target="_blank">Software 11</a></div>
+      <div class="file-card"><a href="https://example.com/file23" target="_blank">APK File 12</a></div>
+      <div class="file-card"><a href="https://example.com/file24" target="_blank">Software 12</a></div>
+      <div class="file-card"><a href="https://example.com/file25" target="_blank">APK File 13</a></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Made with love <span style="color: red;">❤️</span> by <a href="#" target="_blank">Shaurya</a>
+  </div>
+</body>
+</html>
