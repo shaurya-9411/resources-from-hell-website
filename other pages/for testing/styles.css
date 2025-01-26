@@ -60,6 +60,27 @@ h1 {
   50% { border-color: transparent; }
 }
 
+.back-button {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #00FF00;
+  color: #121212;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #FF00FF;
+  color: #00FF00;
+  box-shadow: 0 0 20px #FF00FF;
+}
+
+
 .file-cards-container {
   display: flex;
   flex-wrap: wrap;
